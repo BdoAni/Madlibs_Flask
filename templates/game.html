@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        This is a game page!
+        Hi {{ person }}!
+        <form action="/madlib" name="person">
+        <input type="hidden"  value="{{person}}" name="person"><br>
+    pick a color:
+    <select name="colors">
+      {%for color in colors %}
+      <option>{{color}}</option>
+          {% endfor%}
+    </select>
+    pick a noun:
+    <select name="noun">
+      {%for n in noun %}
+      <option>{{n}}</option>
+          {% endfor%}
+    </select>
+    pick an adjective:
+    <select name="adjective">
+      {%for adj in adjective %}
+      <option>{{adj}}</option>
+          {% endfor%}
+    </select>
+    <input type="submit"  >
+        </form>
+    </h1>
+</body>
+</html>

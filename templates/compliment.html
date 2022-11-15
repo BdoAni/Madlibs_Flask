@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>A Compliment</title>
+</head>
+<body>
+    Hi {{ person }}! 
+    <form action="/game" >
+    <input type="hidden"  value="{{person}}" name="person"><br>
+      would you like to play a game?
+    <input type="checkbox" name="will_play"><br>
+    <input type = "submit">
+    </form>
+
+    <!-- I think you're {{ compliment }}!
+    {% if compliments %}
+    You're so:
+    <ul>
+      {%for compliment in compliments %}
+      <li>{{compliment}}</li>
+      {% endfor%}
+    </ul>
+    {% endif %} -->
+</body>
+</html>
